@@ -8,7 +8,10 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   
- 
+  <title>Harvard Celebration</title>
+  <!-- 1️⃣ Include the confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -35,33 +38,33 @@
   ======================================================== -->
 
 
-  <title>Harvard Celebration</title>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-</head>
-
-    <script>
-    // Auto-fire confetti on page load
-    window.addEventListener('load', () => {
-      confetti({
-        particleCount: 500,
-        spread: 200,
-        origin: { y: 0.6 }
-      });
-    });
-    }
-  </script>
-
 <body class="index-page">
 
-    <script>
+   <h1>Congratulations!</h1>
+  <!-- 2️⃣ Optional button -->
+  <button id="celebrateBtn">Celebrate!</button>
+
+  <!-- 3️⃣ JavaScript goes here -->
+  <script>
     // Auto-fire confetti on page load
     window.addEventListener('load', () => {
       confetti({
-        particleCount: 500,
-        spread: 200,
+        particleCount: 200,
+        spread: 70,
         origin: { y: 0.6 }
       });
     });
+
+    // Optional button trigger
+    const btn = document.getElementById('celebrateBtn');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        confetti({
+          particleCount: 300,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      });
     }
   </script>
     
