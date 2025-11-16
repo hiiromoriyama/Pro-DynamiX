@@ -41,7 +41,7 @@
 <body class="index-page">
 
   <!-- 3️⃣ JavaScript goes here -->
-  <script>
+ <script>
     // Auto-fire confetti on page load
     window.addEventListener('load', () => {
       confetti({
@@ -51,6 +51,16 @@
       });
     });
 
+    // Optional button trigger
+    const btn = document.getElementById('celebrateBtn');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        confetti({
+          particleCount: 300,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      });
     }
   </script>
     
