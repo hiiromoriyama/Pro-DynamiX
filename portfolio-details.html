@@ -150,19 +150,29 @@
           </div>
         </div>
 
-     <style>
-  /* Centre the whole content block on the page */
+ <style>
+  /* Make the content a *single centred column* */
   .project-content {
     max-width: 900px;
-    margin: 0 auto; /* centre horizontally */
+    margin: 0 auto; /* centre the whole block */
   }
 
-  /* Keep heading centred */
+  /* Force a single-column layout */
+  .row.gy-4 {
+    display: block;
+  }
+
+  /* Ensure inner column expands full width */
+  .col-lg-7 {
+    width: 100%;
+  }
+
+  /* Heading centred */
   .description-box h3 {
     text-align: center;
   }
 
-  /* Justify the paragraph text */
+  /* Paragraph justified */
   .description-box p {
     text-align: justify;
     text-justify: inter-word;
@@ -188,7 +198,7 @@
           impede a broader utilisation of this powerful and rapidly evolving
           technique for in-situ and operando studies by embedding AI in the data
           acquisition procedure itself allowing for automation of data
-          collection, control of the experimental equipment for AI-driven
+          collection, control of the experimental equipment for AI-driven
           experiments and analysis on-the-fly of the raw data.
         </p>
       </div>
